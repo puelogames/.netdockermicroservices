@@ -1,0 +1,9 @@
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService1.dll
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService2.dll
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService3.dll
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService1.pdb
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService2.pdb
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\bin\Debug\MicroService3.pdb
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\proyects\NetCoreMicroservices\NetCoreMicroservices1\obj\Debug\docker-compose.dcproj.CopyComplete

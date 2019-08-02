@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+WORKDIR /app
+EXPOSE 83
+
+
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+WORKDIR /src
+COPY ["NetCoreMicroservices/NetCoreMicroservices.csproj", "NetCoreMicroservices/"]
+RUN dotnet restore "NetCoreMicroservices/NetCoreMicroservices.csproj"
+COPY . .
+WORKDIR "/src/NetCoreMicroservices"
+RUN dotnet build "NetCoreMicroservices.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "NetCoreMicroservices.csproj" -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "NetCoreMicroservices.dll"]

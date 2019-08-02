@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  microservice1:
+   image: ${DOCKER_REGISTRY-}microservice1   
+   build:
+      context: .     
+      dockerfile: MicroService1/Dockerfile
+   ports:
+    ['81']
+
+  microservice2:
+    image: ${DOCKER_REGISTRY-}microservice2  
+    build:
+      context: .
+      dockerfile: MicroService2/Dockerfile
+    ports:
+     ['82']
+  microservice3:
+    image: ${DOCKER_REGISTRY-}microservice3     
+    build:
+      context: .
+      dockerfile: MicroService3/Dockerfile
+    ports:
+     ['83']

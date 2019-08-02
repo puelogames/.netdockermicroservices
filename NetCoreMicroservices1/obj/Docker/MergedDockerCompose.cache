@@ -1,0 +1,26 @@
+services:
+  microservice1:
+    build:
+      context: D:\proyects\NetCoreMicroservices\NetCoreMicroservices1
+      dockerfile: MicroService1/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: microservice1
+    ports:
+    - target: 80
+    - target: 81
+  microservice2:
+    build:
+      context: D:\proyects\NetCoreMicroservices\NetCoreMicroservices1
+      dockerfile: MicroService2/Dockerfile
+    image: microservice2
+    ports:
+    - target: 82
+  microservice3:
+    build:
+      context: D:\proyects\NetCoreMicroservices\NetCoreMicroservices1
+      dockerfile: MicroService3/Dockerfile
+    image: microservice3
+    ports:
+    - target: 83
+version: '3.4'
